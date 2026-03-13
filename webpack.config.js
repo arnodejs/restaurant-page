@@ -17,11 +17,16 @@ export default {
   module: {
     rules: [
       {
+        test: /\.html$/i,
+        use: ['html-loader'],
+      },
+
+      {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
         type: 'asset/resource',
       },
       {
